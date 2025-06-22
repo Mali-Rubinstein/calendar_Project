@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>לוח שנה</title>
+    <link rel="stylesheet" href="../css/calendar.css">
+</head>
+<body>
+    <div id="content">
+        <div id="home" class="page active">
+            <h1>ברוך הבא!</h1>
+            <p>זהו דף הבית.</p>
+            <button class="nav-button" id="navigateToLogin" > לדף ההתחברות</button>
+            <button class="nav-button" id="navigateToSignUP" > לדף ההרשמה</button>
+        </div>
+        <div id="login_form" class="page">
+            <h1>התחברות</h1>
+            <form id="loginForm" class="form">
+                <label for="username">שם משתמש:</label>
+                <input type="text" id="username" name="username" required><br><br>
+                <label for="password">סיסמה:</label>
+                <input type="password" id="password" name="password" required><br><br>
+                <button type="button" id="submitLogin" class="nav-button">Login</button>
+            </form>
+            <button class="backHome"  >חזור לדף הבית</button>
+           
+        </div>
+        <div id="signUp_form" class="page">
+            <form id="signUpForm" class="form">
+                <label for="usernameSU">שם משתמש:</label>
+                <input type="text" id="usernameSU" name="usernameSU" required><br><br>
+                <label for="passwordSU">סיסמה:</label>
+                <input type="password" id="passwordSU" name="passwordSU" required><br><br>
+                <label for="authentication">אימות סיסמה:</label>
+                <input type="password" id="authentication" name="authentication" required><br><br>
+                <button type="button" id="submitsignUp" class="nav-button">signUp</button>
+            </form>
+            <button class="backHome"  >חזור לדף הבית</button>
+        </div>
+        <div id="bookCover" class="page active">
+            <div class="overlay">
+                <h1>היומן שלי</h1>
+              </div>
+            <button class="nav-button" id="CurrentCalendar">   ליומן שלי</button>
+            <button class="backHome" >חזור לדף הבית</button>
+        </div>
+        <div class="page" id="calendar">
+            <div class="calendar">
+                <div class="header">
+                    <button class="nav-button" id="prevMonth">קודם</button>
+                    <div class="month-year">
+                        <span id="month"></span> <span id="year"></span>
+                    </div>
+                    <button class="nav-button" id="nextMonth">הבא</button>
+                </div>
+                <div class="weekdays">
+                    <div>א'</div>
+                    <div>ב'</div>
+                    <div>ג'</div>
+                    <div>ד'</div>
+                    <div>ה'</div>
+                    <div>ו'</div>
+                    <div>ש'</div>
+                </div>
+                <div class="days" id="days"></div>
+            </div>
+            <button class="nav-button" id="allEvents">לכל הארועים</button>
+            <button class="nav-button" id="deleteEvent">מחיקת אירוע</button>
+            <button class="nav-button" id="logOut">התנתקות </button>
+        </div>
+       
+    </div>
+    
+    <script src="../js/spa.js"></script>
+    <script src="../js/DB.js"></script>
+    <script src="../js/server.js"></script>
+    <script src="../js/fajax.js"></script>
+    <script src="../js/netWork.js"></script>
+    <script src="../js/calendar.js"></script>
+</body>
+</html>
